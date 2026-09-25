@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos | ModaFácil</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="pagina-sistema">
+
+    <aside class="menu-lateral">
+        <div>
+            <h1 class="logo">ModaFácil</h1>
+
+            <nav>
+                <a href="dashboard.html">🏠 Dashboard</a>
+                <a href="produtos.html" class="menu-ativo">👗 Produtos</a>
+                <a href="clientes.html">👥 Clientes</a>
+            </nav>
+        </div>
+
+        <button id="botaoSair" class="botao-sair">Sair do sistema</button>
+    </aside>
+
+    <main class="conteudo-principal">
+        <header class="cabecalho">
+            <div>
+                <h2>Gerenciamento de produtos</h2>
+                <p>Cadastre e controle os produtos da loja.</p>
+            </div>
+        </header>
+
+        <section class="formulario-card">
+            <h3>Cadastrar produto</h3>
+
+            <form id="formProduto">
+                <div class="grade-formulario">
+                    <div class="campo">
+                        <label for="nomeProduto">Nome do produto</label>
+                        <input
+                            type="text"
+                            id="nomeProduto"
+                            placeholder="Ex.: Vestido floral"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="categoria">Categoria</label>
+                        <select id="categoria" required>
+                            <option value="">Selecione</option>
+                            <option value="Vestidos">Vestidos</option>
+                            <option value="Blusas">Blusas</option>
+                            <option value="Calças">Calças</option>
+                            <option value="Saias">Saias</option>
+                            <option value="Acessórios">Acessórios</option>
+                            <option value="Calçados">Calçados</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                       <label for="preco">Preço (R$)</label>
+                        <input
+                            type="number"
+                            id="preco"
+                            min="0.01"
+                            step="0.01"
+                            placeholder="0,00"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="quantidade">Quantidade</label>
+                        <input
+                            type="number"
+                            id="quantidade"
+                            min="1"
+                            placeholder="0"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="acoes-formulario">
+    <button
+        type="submit"
+        id="botaoSalvarProduto"
+        class="botao-cadastrar"
+    >
+        Cadastrar produto
+    </button>
+
+    <button
+        type="button"
+        id="botaoCancelarEdicaoProduto"
+        class="botao-cancelar"
+        hidden
+    >
+        Cancelar edição
+    </button>
+</div>
+
+<p id="mensagemProduto" class="mensagem-formulario"></p>
+            </form>
+        </section>
+
+        <section class="tabela-card">
+            <div class="titulo-tabela">
+                <h3>Produtos cadastrados</h3>
+
+                <input
+                    type="search"
+                    id="pesquisaProduto"
+                    placeholder="Pesquisar produto..."
+                >
+            </div>
+
+            <div class="tabela-responsiva">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Categoria</th>
+                            <th>Preço</th>
+                            <th>Quantidade</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="listaProdutos">
+                        <!-- Os produtos serão inseridos pelo JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="semProdutos" class="lista-vazia">
+                Nenhum produto cadastrado.
+            </p>
+        </section>
+    </main>
+
+    <script src="js/produtos.js"></script>
+</body>
+</html>

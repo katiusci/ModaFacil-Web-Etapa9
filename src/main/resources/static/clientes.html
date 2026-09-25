@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes | ModaFácil</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="pagina-sistema">
+
+    <aside class="menu-lateral">
+        <div>
+            <h1 class="logo">ModaFácil</h1>
+
+            <nav>
+                <a href="dashboard.html">🏠 Dashboard</a>
+                <a href="produtos.html">👗 Produtos</a>
+                <a href="clientes.html" class="menu-ativo">👥 Clientes</a>
+            </nav>
+        </div>
+
+        <button id="botaoSair" class="botao-sair">Sair do sistema</button>
+    </aside>
+
+    <main class="conteudo-principal">
+        <header class="cabecalho">
+            <div>
+                <h2>Gerenciamento de clientes</h2>
+                <p>Cadastre e organize os dados dos clientes.</p>
+            </div>
+        </header>
+
+        <section class="formulario-card">
+            <h3>Dados pessoais</h3>
+
+            <form id="formCliente">
+                <div class="grade-formulario">
+                    <div class="campo">
+                        <label for="nomeCliente">Nome completo</label>
+                        <input
+                            type="text"
+                            id="nomeCliente"
+                            placeholder="Digite o nome completo"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="emailCliente">E-mail</label>
+                        <input
+                            type="email"
+                            id="emailCliente"
+                            placeholder="cliente@email.com"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefoneCliente">Telefone</label>
+                        <input
+                            type="tel"
+                            id="telefoneCliente"
+                            placeholder="Ex.: (11) 99999-9999"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="cepCliente">CEP</label>
+                        <input
+                            type="text"
+                            id="cepCliente"
+                            placeholder="Ex.: 01001-000"
+                            maxlength="9"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <h3 class="titulo-endereco">Endereço</h3>
+
+                <div class="grade-formulario">
+                    <div class="campo">
+                        <label for="estadoCliente">Estado</label>
+                        <select id="estadoCliente" required>
+                            <option value="">Selecione</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="cidadeCliente">Cidade</label>
+                        <input
+                            type="text"
+                            id="cidadeCliente"
+                            placeholder="Ex.: São Paulo"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="bairroCliente">Bairro</label>
+                        <input
+                            type="text"
+                            id="bairroCliente"
+                            placeholder="Digite o bairro"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="ruaCliente">Rua</label>
+                        <input
+                            type="text"
+                            id="ruaCliente"
+                            placeholder="Digite o nome da rua"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="numeroCliente">Número</label>
+                        <input
+                            type="text"
+                            id="numeroCliente"
+                            placeholder="Ex.: 125"
+                            maxlength="10"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="complementoCliente">
+                            Complemento (opcional)
+                        </label>
+                        <input
+                            type="text"
+                            id="complementoCliente"
+                            placeholder="Ex.: Apartamento 12"
+                        >
+                    </div>
+                </div>
+
+                <div class="acoes-formulario">
+    <button
+        type="submit"
+        id="botaoSalvarCliente"
+        class="botao-cadastrar"
+    >
+        Cadastrar cliente
+    </button>
+
+    <button
+        type="button"
+        id="botaoCancelarEdicao"
+        class="botao-cancelar"
+        hidden
+    >
+        Cancelar edição
+    </button>
+</div>
+
+<p id="mensagemCliente" class="mensagem-formulario"></p>
+            </form>
+        </section>
+
+        <section class="tabela-card">
+            <div class="titulo-tabela">
+                <h3>Clientes cadastrados</h3>
+
+                <input
+                    type="search"
+                    id="pesquisaCliente"
+                    placeholder="Pesquisar cliente ou endereço..."
+                >
+            </div>
+
+            <div class="tabela-responsiva">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Telefone</th>
+                            <th>Endereço</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="listaClientes">
+                        <!-- Clientes inseridos pelo JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="semClientes" class="lista-vazia">
+                Nenhum cliente cadastrado.
+            </p>
+        </section>
+    </main>
+
+    <script src="js/clientes.js"></script>
+</body>
+</html>

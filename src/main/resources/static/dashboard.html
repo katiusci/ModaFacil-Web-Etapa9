@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | ModaFácil</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="pagina-sistema">
+
+    <aside class="menu-lateral">
+        <div>
+            <h1 class="logo">ModaFácil</h1>
+
+            <nav>
+                <a href="dashboard.html" class="menu-ativo">🏠 Dashboard</a>
+                <a href="produtos.html">👗 Produtos</a>
+                <a href="clientes.html">👥 Clientes</a>
+            </nav>
+        </div>
+
+        <button id="botaoSair" class="botao-sair">Sair do sistema</button>
+    </aside>
+
+    <main class="conteudo-principal">
+        <header class="cabecalho">
+            <div>
+                <h2>Painel de controle</h2>
+                <p>Bem-vindo ao sistema ModaFácil!</p>
+            </div>
+
+            <div class="usuario">
+                <span>👤</span>
+                <strong>Administrador</strong>
+            </div>
+        </header>
+
+        <section class="cards-dashboard">
+            <article class="card-resumo">
+                <span class="card-icone">👗</span>
+                <div>
+                    <p>Produtos cadastrados</p>
+                    <strong id="totalProdutos">0</strong>
+                </div>
+            </article>
+
+            <article class="card-resumo">
+                <span class="card-icone">👥</span>
+                <div>
+                    <p>Clientes cadastrados</p>
+                    <strong id="totalClientes">0</strong>
+                </div>
+            </article>
+
+            <article class="card-resumo">
+                <span class="card-icone">📦</span>
+                <div>
+                    <p>Produtos em estoque</p>
+                    <strong id="totalEstoque">0</strong>
+                </div>
+            </article>
+        </section>
+
+        <section class="painel-boas-vindas">
+            <div>
+                <h3>Gerencie sua loja com facilidade</h3>
+
+                <p>
+                    Utilize o menu lateral para cadastrar produtos,
+                    controlar o estoque e organizar os dados dos clientes.
+                </p>
+
+                <div class="atalhos">
+                    <a href="produtos.html" class="botao-atalho">
+                        Cadastrar produto
+                    </a>
+
+                    <a href="clientes.html" class="botao-atalho secundario">
+                        Cadastrar cliente
+                    </a>
+                </div>
+            </div>
+
+            <div class="ilustracao-dashboard">🛍️</div>
+        </section>
+    </main>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
