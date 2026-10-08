@@ -1,4 +1,4 @@
-# 🧪 Casos de Teste — ModaFácil
+#  Casos de Teste — ModaFácil
 
 Esta documentação reúne casos de teste executados no projeto académico **ModaFácil**, com foco na aplicação prática de Quality Assurance e Testes Manuais.
 
@@ -8,9 +8,9 @@ Esta documentação reúne casos de teste executados no projeto académico **Mod
 
 **Módulo:** Clientes  
 **Tipo de teste:** Funcional  
-**Status:** ✅ Aprovado
+**Status:**  Aprovado
 
-### 🎯 Objetivo
+###  Objetivo
 Validar se o sistema permite cadastrar corretamente um novo cliente utilizando dados válidos.
 
 ### Pré-condição
@@ -42,7 +42,7 @@ O sistema apresentou a mensagem **“Cliente cadastrado com sucesso!”**.
 
 O cliente foi apresentado corretamente na listagem e a consulta SQL confirmou que os dados foram persistidos no banco.
 
-### 🗄️ Validação SQL
+###  Validação SQL
 
 ```sql
 SELECT *
@@ -58,20 +58,20 @@ WHERE nome = 'Maria Oliveira';
 
 **Módulo:** Clientes  
 **Tipo:** Teste funcional — Cenário negativo  
-**Status:** ✅ Aprovado
+**Status:**  Aprovado
 
-### 🎯 Objetivo
+###  Objetivo
 Validar se o sistema impede o cadastro quando o campo obrigatório **Nome completo** não é preenchido.
 
-### 🧪 Cenário testado
+###  Cenário testado
 1. Preencher os dados do cliente.
 2. Manter **Nome completo** vazio.
 3. Clicar em **Cadastrar cliente**.
 
-### ✅ Resultado esperado
+###  Resultado esperado
 O sistema deve impedir o cadastro e informar que o campo precisa ser preenchido.
 
-### 🔎 Resultado obtido
+###  Resultado obtido
 O cadastro foi bloqueado e o sistema apresentou a mensagem:
 
 > **“Preencha este campo.”**
@@ -79,7 +79,7 @@ O cadastro foi bloqueado e o sistema apresentou a mensagem:
 ### 📸 Evidência
 Captura da validação apresentada no campo **Nome completo**.
 
-**Resultado final: ✅ APROVADO**
+**Resultado final:  APROVADO**
 
 ----
 ---
@@ -88,12 +88,12 @@ Captura da validação apresentada no campo **Nome completo**.
 
 **Módulo:** Produtos  
 **Tipo de teste:** Funcional — Edição / Persistência  
-**Status:** ✅ Aprovado
+**Status:**  Aprovado
 
-### 🎯 Objetivo
+###  Objetivo
 Validar se o sistema permite editar corretamente os dados de um produto e persiste as alterações no banco de dados.
 
-### 🧪 Cenário testado
+###  Cenário testado
 Foi realizada a edição do produto **blusa Camila**, alterando os dados e salvando as modificações.
 
 **Dados após a edição:**
@@ -102,7 +102,7 @@ Foi realizada a edição do produto **blusa Camila**, alterando os dados e salva
 - **Preço:** R$ 29,90
 - **Quantidade:** 45
 
-### 📝 Passos executados
+###  Passos executados
 1. Aceder ao módulo **Produtos**.
 2. Localizar o produto **blusa Camila**.
 3. Clicar em **Editar**.
@@ -111,10 +111,10 @@ Foi realizada a edição do produto **blusa Camila**, alterando os dados e salva
 6. Verificar os novos valores na listagem de produtos.
 7. Consultar o banco de dados para validar a persistência das alterações.
 
-### ✅ Resultado esperado
+###  Resultado esperado
 O sistema deve salvar as alterações realizadas e apresentar os novos dados do produto na aplicação e no banco de dados.
 
-### 🔎 Resultado obtido
+###  Resultado obtido
 O produto **blusa Camila** foi atualizado corretamente.
 
 A aplicação apresentou:
@@ -123,7 +123,7 @@ A aplicação apresentou:
 
 A consulta ao banco de dados confirmou a persistência dos mesmos valores.
 
-### 🗄️ Validação SQL
+###  Validação SQL
 
 ```sql
 SELECT *
