@@ -59,3 +59,23 @@ A consulta SQL confirmou que os produtos duplicados foram persistidos como regis
 **Resultado: 🐞 DEFEITO IDENTIFICADO**
 
 ➡️ Consulte a documentação completa em [`bugs.md`](../bugs.md)
+
+---
+
+## CT-003 — Edição de produto com dados válidos
+
+Foi realizada a edição do produto **blusa Camila** e posteriormente validada a persistência das alterações no banco de dados.
+
+### 📸 Evidência 01 — Produto editado
+
+Após salvar as alterações, o produto foi apresentado na aplicação com **preço R$ 29,90** e **quantidade 45**.
+
+![CT-003 - Produto editado](CT003-01-produto-editado.png)
+
+### 🗄️ Evidência 02 — Validação no banco de dados
+
+A consulta SQL confirmou que as alterações realizadas na aplicação foram persistidas corretamente no banco de dados.
+
+![CT-003 - Validação SQL da edição](CT003-02-validacao-sql-edicao.png)
+
+**Resultado: ✅ APROVADO**
