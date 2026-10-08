@@ -44,7 +44,7 @@ O sistema impediu o cadastro e apresentou a mensagem **“Preencha este campo.�
 
 Durante os testes no módulo **Produtos**, foi identificado que o sistema permite cadastrar novamente um produto já existente, criando registros distintos em vez de atualizar a quantidade em estoque.
 
-### 📸 Evidência 01 — Produtos duplicados na listagem
+###  Evidência 01 — Produtos duplicados na listagem
 
 A listagem apresenta o mesmo produto cadastrado mais de uma vez.
 
