@@ -80,3 +80,52 @@ O cadastro foi bloqueado e o sistema apresentou a mensagem:
 Captura da validação apresentada no campo **Nome completo**.
 
 **Resultado final: ✅ APROVADO**
+
+----
+---
+
+## CT-003 — Edição de produto com dados válidos
+
+**Módulo:** Produtos  
+**Tipo de teste:** Funcional — Edição / Persistência  
+**Status:** ✅ Aprovado
+
+### 🎯 Objetivo
+Validar se o sistema permite editar corretamente os dados de um produto e persiste as alterações no banco de dados.
+
+### 🧪 Cenário testado
+Foi realizada a edição do produto **blusa Camila**, alterando os dados e salvando as modificações.
+
+**Dados após a edição:**
+- **Nome:** blusa Camila
+- **Categoria:** Blusas
+- **Preço:** R$ 29,90
+- **Quantidade:** 45
+
+### 📝 Passos executados
+1. Aceder ao módulo **Produtos**.
+2. Localizar o produto **blusa Camila**.
+3. Clicar em **Editar**.
+4. Alterar os dados do produto.
+5. Clicar em **Salvar alterações**.
+6. Verificar os novos valores na listagem de produtos.
+7. Consultar o banco de dados para validar a persistência das alterações.
+
+### ✅ Resultado esperado
+O sistema deve salvar as alterações realizadas e apresentar os novos dados do produto na aplicação e no banco de dados.
+
+### 🔎 Resultado obtido
+O produto **blusa Camila** foi atualizado corretamente.
+
+A aplicação apresentou:
+- **Preço:** R$ 29,90
+- **Quantidade:** 45
+
+A consulta ao banco de dados confirmou a persistência dos mesmos valores.
+
+### 🗄️ Validação SQL
+
+```sql
+SELECT *
+FROM produtos
+WHERE nome = 'blusa Camila';
