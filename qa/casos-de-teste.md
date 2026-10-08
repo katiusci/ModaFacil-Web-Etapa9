@@ -48,3 +48,34 @@ O cliente foi apresentado corretamente na listagem e a consulta SQL confirmou qu
 SELECT *
 FROM clientes
 WHERE nome = 'Maria Oliveira';
+
+---
+
+---
+
+## CT-002 — Validação de campo obrigatório
+
+**Módulo:** Clientes  
+**Tipo:** Teste funcional — Cenário negativo  
+**Status:** ✅ Aprovado
+
+### 🎯 Objetivo
+Validar se o sistema impede o cadastro quando o campo obrigatório **Nome completo** não é preenchido.
+
+### 🧪 Cenário testado
+1. Preencher os dados do cliente.
+2. Manter **Nome completo** vazio.
+3. Clicar em **Cadastrar cliente**.
+
+### ✅ Resultado esperado
+O sistema deve impedir o cadastro e informar que o campo precisa ser preenchido.
+
+### 🔎 Resultado obtido
+O cadastro foi bloqueado e o sistema apresentou a mensagem:
+
+> **“Preencha este campo.”**
+
+### 📸 Evidência
+Captura da validação apresentada no campo **Nome completo**.
+
+**Resultado final: ✅ APROVADO**
