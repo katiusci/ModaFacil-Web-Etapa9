@@ -25,3 +25,15 @@ Esta pasta contém as evidências das execuções dos casos de teste documentado
 Consulta SQL realizada para confirmar a persistência dos dados cadastrados.
 
 ![CT-001 - Validação SQL](CT001-03-validacao-sql%20(2).png)
+
+---
+
+## CT-002 — Validação de campo obrigatório
+
+### Evidência 01 — Nome completo obrigatório
+
+O sistema impediu o cadastro e apresentou a mensagem **“Preencha este campo.”** quando o campo **Nome completo** foi deixado vazio.
+
+![CT-002 - Campo nome obrigatório](CT002-01-campo-nome-obrigatorio.png)
+
+**Resultado: ✅ APROVADO**
