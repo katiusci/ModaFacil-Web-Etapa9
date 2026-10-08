@@ -37,3 +37,25 @@ O sistema impediu o cadastro e apresentou a mensagem **“Preencha este campo.�
 ![CT-002 - Campo nome obrigatório](CT002-01-campo-nome-obrigatorio.png)
 
 **Resultado: ✅ APROVADO**
+
+---
+
+## 🐞 BUG-001 — Cadastro duplicado de produto
+
+Durante os testes no módulo **Produtos**, foi identificado que o sistema permite cadastrar novamente um produto já existente, criando registros distintos em vez de atualizar a quantidade em estoque.
+
+### 📸 Evidência 01 — Produtos duplicados na listagem
+
+A listagem apresenta o mesmo produto cadastrado mais de uma vez.
+
+![BUG-001 - Produtos duplicados](BUG001-01-produtos-duplicados.png)
+
+### 🗄️ Evidência 02 — Validação no banco de dados
+
+A consulta SQL confirmou que os produtos duplicados foram persistidos como registros distintos no banco de dados.
+
+![BUG-001 - Validação SQL](BUG001-02-validacao-sql-produto-duplicado.png)
+
+**Resultado: 🐞 DEFEITO IDENTIFICADO**
+
+➡️ Consulte a documentação completa em [`bugs.md`](../bugs.md)
