@@ -48,10 +48,11 @@ O cliente foi apresentado corretamente na listagem e a consulta SQL confirmou qu
 SELECT *
 FROM clientes
 WHERE nome = 'Maria Oliveira';
+```
 
----
 
----
+
+
 
 ## CT-002 — Validação de campo obrigatório
 
